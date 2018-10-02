@@ -193,6 +193,7 @@ module.exports = function(RED) {
                 return false;
             }
 
+            node.log(slackChannel);
             if (slackChannel.is_member === false || slackChannel.is_im === false) {
                 node.warn("Slack bot is not a member of this Channel");
                 return false;
